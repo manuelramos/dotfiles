@@ -9,6 +9,14 @@ filetype indent on
 set autoread
 au FocusGained,BufEnter * checktime
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim Plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+Plug 'git@github.com:chriskempson/base16-vim.git'
+" Initialize plugin system
+call plug#end()
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -82,7 +90,7 @@ set foldcolumn=1
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable
+syntax on
 
 try
     colorscheme base16-default-dark
@@ -96,7 +104,11 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-set termguicolors
+"if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+"endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
