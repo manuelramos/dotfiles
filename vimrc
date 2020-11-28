@@ -14,6 +14,9 @@ au FocusGained,BufEnter * checktime
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'git@github.com:chriskempson/base16-vim.git'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
 " Initialize plugin system
 call plug#end()
 
