@@ -13,7 +13,7 @@ au FocusGained,BufEnter * checktime
 " Vim Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'git@github.com:chriskempson/base16-vim.git'
+Plug 'git@github.com:rakr/vim-one.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
@@ -94,13 +94,18 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax on
-
+set background=dark
 try
-    colorscheme base16-default-dark
+    colorscheme one
 catch
 endtry
 
-set background=dark
+" vim hardcodes background color erase even if the terminfo file does
+" not contain bce (not to mention that libvte based terminals
+" incorrectly contain bce in their terminfo files). This causes
+" incorrect background rendering when using a color theme with a
+" background color.
+let &t_ut=''
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
