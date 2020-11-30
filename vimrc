@@ -17,6 +17,8 @@ Plug 'git@github.com:rakr/vim-one.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
+Plug 'git@github.com:cespare/vim-toml.git'
+Plug 'git@github.com:rust-lang/rust.vim.git'
 " Initialize plugin system
 call plug#end()
 
