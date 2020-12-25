@@ -1,0 +1,10 @@
+[user]
+	name = Manuel Ramos
+	email = manuelramos175@gmail.com
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	s = status
