@@ -13,12 +13,14 @@ au FocusGained,BufEnter * checktime
 " Vim Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'git@github.com:rakr/vim-one.git'
+Plug 'rakr/vim-one'
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'https://github.com/Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
-Plug 'git@github.com:cespare/vim-toml.git'
-Plug 'git@github.com:rust-lang/rust.vim.git'
+Plug 'Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
+Plug 'cespare/vim-toml'
+Plug 'rust-lang/rust.vim'
+Plug 'chriskempson/base16-vim'
 " Initialize plugin system
 call plug#end()
 
@@ -98,7 +100,7 @@ set foldcolumn=1
 syntax on
 set background=dark
 try
-    colorscheme one
+    colorscheme base16-atelier-dune
 catch
 endtry
 
