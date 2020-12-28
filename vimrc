@@ -21,6 +21,8 @@ Plug 'Raimondi/delimitMate'          " automatic closing of quotes, parenthesis,
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " Initialize plugin system
 call plug#end()
 
@@ -175,4 +177,9 @@ au FileType python inoremap <buffer> $f # --- <esc>a
 au FileType python map <buffer> <leader>1 /class 
 au FileType python map <buffer> <leader>2 /def 
 au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
+au FileType python map <buffer> <leader>D ?def
+
+" Settings for Utilsnippets plugin
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
