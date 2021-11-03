@@ -1,0 +1,1 @@
+sudo pacman -S bat fzf git-delta the_silver_searcher ripgrep
