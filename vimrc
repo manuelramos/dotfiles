@@ -51,6 +51,9 @@ set wildmenu
 " Enable line number
 set nu
 
+" Enable cursor line
+set cursorline
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
