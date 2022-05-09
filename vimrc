@@ -20,7 +20,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'prabirshrestha/vim-lsp'
@@ -28,6 +27,9 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
+Plug 'ajmwagar/vim-deus'
 
 " Initialize plugin system
 call plug#end()
@@ -52,7 +54,7 @@ set wildmenu
 set nu
 
 " Enable cursor line
-set cursorline
+" set cursorline
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -111,7 +113,7 @@ set foldcolumn=1
 syntax on
 set background=dark
 try
-    colorscheme base16-atelier-dune
+    colorscheme nord
 catch
 endtry
 
