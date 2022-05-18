@@ -18,18 +18,25 @@ Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'          " automatic closing of quotes, parenthesis, brackets, etc
-Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Yggdroot/indentLine'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'mattn/vim-lsp-settings'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Colorschemes
 Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'ajmwagar/vim-deus'
+
+" Syntax Highlighting
+Plug 'sheerun/vim-polyglot'
+Plug 'cespare/vim-toml'
+"Plug 'uarun/vim-protobuf'
 
 " Initialize plugin system
 call plug#end()
