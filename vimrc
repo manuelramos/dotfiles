@@ -38,6 +38,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'cespare/vim-toml'
 "Plug 'uarun/vim-protobuf'
 
+" Syntax tools
+Plug 'vim-syntastic/syntastic'
+
+" Python
+Plug 'jmcantrell/vim-virtualenv'
 " Initialize plugin system
 call plug#end()
 
@@ -201,3 +206,20 @@ au FileType python map <buffer> <leader>D ?def
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Syntastic Settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_rust_checkers = ['cargo']
+
+" Rust plugin configurations
+let g:rustfmt_autosave = 1 " format file on save
+
+" Vim Virtualenv
+let g:virtualenv_directory = $PWD
