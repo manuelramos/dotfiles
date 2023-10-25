@@ -1,6 +1,6 @@
 [user]
 	name = Manuel Ramos
-	email = manuel.ramos@attackiq.com
+	email = manuelramos@email.com
 [core]
 	editor = vim
 [alias]
@@ -13,3 +13,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[init]
+	defaultBranch = main

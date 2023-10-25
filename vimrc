@@ -12,7 +12,7 @@ au FocusGained,BufEnter * checktime
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 Plug 'rakr/vim-one'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -125,7 +125,7 @@ set foldcolumn=1
 syntax on
 set background=dark
 try
-    colorscheme nord
+    colorscheme gruvbox
 catch
 endtry
 
@@ -203,6 +203,7 @@ au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def
 
 " Settings for Utilsnippets plugin
+" ActivateAddons vim-snippets snipmate
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -222,4 +223,4 @@ let g:syntastic_rust_checkers = ['cargo']
 let g:rustfmt_autosave = 1 " format file on save
 
 " Vim Virtualenv
-let g:virtualenv_directory = $PWD
+"let g:virtualenv_directory = $PWD
