@@ -1,17 +1,26 @@
+[core]
+    editor = vim
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    s = status
+    lol = log --oneline --decorate
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[init]
+    defaultBranch = main
+
+[includeIf "gitdir:~/Development/work/kiu/"]
+    path = ~/.gitconfig-kiu
+
+[includeIf "gitdir:~/Development/personal/"]
+    path = ~/.gitconfig-personal
 [user]
 	name = Manuel Ramos
-	email = manuelramos@email.com
-[core]
-	editor = vim
-[alias]
-	co = checkout
-	br = branch
-	ci = commit
-	s = status
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[init]
-	defaultBranch = main
+	email = manuelramos175@gmail.com
+[pull]
+	rebase = true

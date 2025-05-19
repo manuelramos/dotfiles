@@ -1,40 +1,82 @@
+# Font configuration
 font:
   size: 14
+  normal:
+    family: "Fira Code" # You can change this to your preferred font
+  bold:
+    family: "Fira Code"
+  italic:
+    family: "Fira Code"
 
+# Selection configuration
 selection:
   save_to_clipboard: true
 
+# Performance settings
+# Increase scrollback buffer size
+scrolling:
+  history: 10000
+
+# Enable hardware acceleration
+window:
+  dynamic_title: true
+  decorations: full
+  startup_mode: Windowed
+  transparency: 0.9
+
+# Colors configuration
 colors:
   # Default colors
   primary:
-    background: '0x20201d'
-    foreground: '0xa6a28c'
+    background: '0x1e1e2e'
+    foreground: '0xc0caf5'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x20201d'
-    cursor: '0xa6a28c'
+    text: '0x1e1e2e'
+    cursor: '0xc0caf5'
 
   # Normal colors
   normal:
-    black:   '0x20201d'
-    red:     '0xd73737'
-    green:   '0x60ac39'
-    yellow:  '0xae9513'
-    blue:    '0x6684e1'
-    magenta: '0xb854d4'
-    cyan:    '0x1fad83'
-    white:   '0xa6a28c'
+    black:   '0x1e1e2e'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xa9b1d6'
 
   # Bright colors
   bright:
-    black:   '0x7d7a68'
-    red:     '0xb65611'
-    green:   '0x292824'
-    yellow:  '0x6e6b5e'
-    blue:    '0x999580'
-    magenta: '0xe8e4cf'
-    cyan:    '0xd43552'
-    white:   '0xfefbec'
+    black:   '0x414868'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan:    '0x7dcfff'
+    white:   '0xc0caf5'
 
-draw_bold_text_with_bright_colors: false
+# Draw bold text with bright colors
+draw_bold_text_with_bright_colors: true
+
+# Key bindings
+key_bindings:
+  - { key: V,        mods: Control|Shift, action: Paste                        }
+  - { key: C,        mods: Control|Shift, action: Copy                         }
+  - { key: K,        mods: Control|Shift, action: ScrollPageUp                 }
+  - { key: J,        mods: Control|Shift, action: ScrollPageDown               }
+  - { key: F,        mods: Control|Shift, action: SearchForward                }
+  - { key: B,        mods: Control|Shift, action: SearchBackward               }
+  - { key: N,        mods: Control|Shift, action: SpawnNewInstance             }
+  - { key: T,        mods: Control|Shift, action: SpawnNewInstance             }
+  - { key: W,        mods: Control|Shift, action: Close                        }
+  - { key: R,        mods: Control|Shift, action: ReloadConfiguration          }
+  - { key: Plus,     mods: Control|Shift, action: IncreaseFontSize             }
+  - { key: Minus,    mods: Control|Shift, action: DecreaseFontSize             }
+  - { key: Zero,     mods: Control|Shift, action: ResetFontSize                }
+  - { key: L,        mods: Control|Shift, action: ClearLogNotice               }
+  - { key: Enter,    mods: Control|Shift, action: ToggleFullscreen             }
+  - { key: F11,      mods: None,           action: ToggleFullscreen            }
+  - { key: F12,      mods: None,           action: SpawnNewInstance            }
