@@ -14,7 +14,7 @@
 [init]
     defaultBranch = main
 
-[includeIf "gitdir:~/Development/work/kiu/"]
+[includeIf "gitdir:~/Development/work/kiu/repos/"]
     path = ~/.gitconfig-kiu
 
 [includeIf "gitdir:~/Development/personal/"]
